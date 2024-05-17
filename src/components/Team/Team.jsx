@@ -77,14 +77,14 @@ const Team = () => {
         <div className='bg-[#FFFFFF] md:bg-transparent w-[85%] md:h-[593px] mx-auto my-8 max-w-[1050px]'>
             <div className='justify-between items-center py-2 xl:py-3'>
                 {/* heading */}
-                <h4 className='font-SulphurPoint font-normal text-base md:text-2xl lg:text-4xl xl:text-[40px] text-[#121212] md:text-[#2D2D2D]'>Mentor</h4>
+                <h4 className='font-SulphurPoint font-normal text-base md:text-2xl lg:text-4xl xl:text-[40px] text-[#121212] md:text-[#2D2D2D]'>Project Incharge & Mentor</h4>
                 {/* view all option */}
             </div>
             <div className="flex">
                 {/* Map over the array of fetched team members to render TeamCard components dynamically */}
                 {teamMembers.map((member, index) => (
                     <div key={index}>
-                        <TeamCard image={r} name={member.name} about={member.role} />
+                        <TeamCard image={member.image_url} name={member.name} about={member.role} />
                     </div>
                 ))}
             </div>
